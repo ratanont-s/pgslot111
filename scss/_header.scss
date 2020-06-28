@@ -1,0 +1,120 @@
+header {
+    background: $darkgreen;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        @include gradient-y($start-color: $gold, $end-color: $lightgold, $start-percent: 0%, $end-percent: 100%);
+        z-index: 0;
+    }
+
+    .header {
+        &-top {
+            padding: 6rem 0 1rem;
+            text-align: center;
+
+            .btn {
+                min-width: 250px;
+                color: black;
+                border-radius: 10rem;
+                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+
+                &:hover {
+                    filter: drop-shadow(0 3px 6px rgba(white, .5));
+                }
+
+                strong {
+                    display: block;
+                    font-size: 1.5em;
+                    margin-bottom: -.5rem;
+                    font-family: $font-arial;
+                }
+            }
+        }
+    }
+
+    .nav {
+        &-item {
+            &.active {
+                .nav-link {
+                    color: $gold;
+                }
+            }
+        }
+
+        &-link {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        position: relative !important;
+        background: url('../img/bg-header@2x.png') no-repeat center top/cover;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../img/bg-logo@2x.png') no-repeat center top/auto;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+            z-index: 0;
+        }
+
+        .navbar {
+            padding: 0;
+            z-index: 1;
+        }
+
+        .nav {
+            &-logo {
+                position: relative;
+                width: 348px;
+
+                a {
+                    position: absolute;
+                    bottom: -2.5rem;
+                    padding: 0;
+                }
+            }
+
+            &-item {
+                padding: 0 .5rem;
+
+                &.active {
+                    .nav-link {
+                        color: black;
+                        background: url('../img/bg-nav-link-active.png') repeat-x left center/auto 100%;
+                    }
+                }
+            }
+
+            &-link {
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                color: black;
+                min-width: 125px;
+                padding-bottom: 0;
+                font-size: 1.25em;
+                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+            }
+        }
+    }
+}

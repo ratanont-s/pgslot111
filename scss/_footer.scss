@@ -1,0 +1,17 @@
+footer {
+    padding: 1rem 0;
+    text-align: center;
+
+    small {
+        opacity: 0.15;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 0;
+        background: url('../img/bg-footer@2x.png') no-repeat center top/cover;
+
+        small {
+            font-size: 1.5em;
+        }
+    }
+}

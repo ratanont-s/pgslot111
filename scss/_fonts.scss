@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'supermarket';
+    src: url('../font/supermarket.woff2') format('woff2'),
+        url('../font/supermarket.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url('../font/ArialRoundedMTBold.woff2') format('woff2'),
+        url('../font/ArialRoundedMTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

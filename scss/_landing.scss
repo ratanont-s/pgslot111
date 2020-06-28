@@ -1,0 +1,457 @@
+section {
+    a {
+        display: block;
+
+        &:hover {
+            img {
+                filter: drop-shadow(0 0 1rem rgba(white, .5));
+            }
+        }
+    }
+
+    &#video {
+        position: relative;
+        padding: 4px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 4px;
+            bottom: 0;
+            @include gradient-y($start-color: $lightgold, $end-color: $gold, $start-percent: 0%, $end-percent: 100%);
+        }
+
+        @include media-breakpoint-up(lg) {
+            &::after {
+                height: 6px;
+                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+            }
+        }
+    }
+
+    &#service {
+        padding: .75rem 0 1rem;
+        position: relative;
+
+        .btn-register {
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .card {
+            background-color: black;
+            flex-direction: row;
+            justify-content: center;
+            border-width: 0;
+            border-radius: 1rem;
+
+            .list {
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 0;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &-icon {
+                    display: block;
+                    min-width: 61px;
+                    margin-right: 1rem;
+                    text-align: center;
+                }
+
+                &-detail {
+                    h5 {
+                        color: $yellow;
+                        text-shadow: 0 2px 2px $green;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            background-color: black;
+            padding: 2rem 0;
+            border-top: 4px solid #50ff56;
+            border-bottom: 4px solid #50ff56;
+
+            .line {
+                width: 4px;
+                height: 100%;
+                background-color: white;
+            }
+
+            .service {
+                padding: 0 2rem;
+                text-align: center;
+
+                &-icon {
+                    margin-bottom: 1rem;
+
+                    img {
+                        max-height: 170px;
+                    }
+                }
+
+                &-detail {
+                    h5 {
+                        font-size: 2em;
+                        margin-bottom: 0;
+
+                        span {
+                            color: $lightgreen;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.5em;
+                        color: $lightgreen;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &#step {
+        position: relative;
+        padding: 1rem 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2rem;
+            @include gradient-y($start-color: rgba($lightgreen, 0), $end-color: $lightgreen, $start-percent: 0%, $end-percent: 100%);
+            opacity: 0.25;
+        }
+
+        .step {
+            text-align: center;
+
+            &-icon {
+                margin-bottom: 1rem;
+            }
+
+            &-detail {
+
+                h5,
+                p {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: .75em;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 3rem 0;
+            position: relative;
+            background: url('../img/bg-pattern.png') no-repeat center center/cover;
+            background-attachment: fixed;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                opacity: 1;
+                background: url('../img/bg-pattern-top.png') no-repeat center center/cover;
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 0;
+
+                small {
+                    display: block;
+                }
+
+                strong {
+                    color: $lightgreen;
+                    font-size: 1.5em;
+                }
+            }
+
+            .step {
+                &-icon {
+                    img {
+                        max-width: unset;
+                        max-height: 140px;
+                    }
+                }
+
+                &-detail {
+                    h5 {
+                        font-size: 2em;
+                    }
+
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    &#welcome {
+        padding: 1rem 0;
+
+        .card {
+            background-color: black;
+            border: 3px solid $gold;
+            border-radius: 1rem;
+            position: relative;
+            text-align: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: .25rem;
+                left: .25rem;
+                right: .25rem;
+                bottom: .25rem;
+                border: 1px solid $lightgold;
+                border-radius: .5rem;
+            }
+
+            &-title {
+                strong {
+                    color: $lightgreen;
+                    display: block;
+                    font-size: .9em;
+                }
+
+                small {
+                    font-size: .6em;
+                }
+            }
+
+            &-img {
+                position: relative;
+                margin-bottom: -3rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(black, .5) url('../img/bg-welcome-top.png') no-repeat center center/auto;
+                border-bottom: 4px solid rgba($darkgreen, .5);
+                height: 120px;
+                z-index: 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('../img/lamp.png') no-repeat center top/auto;
+                z-index: 0;
+            }
+
+            .welcome-top {
+                padding: .5rem 0;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+
+    &#withdraw {
+        position: relative;
+        padding: 2rem 0 0;
+        background-image: url('../img/bg-withdraw.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2rem;
+            @include gradient-y($start-color: $lightgreen, $end-color: rgba($lightgreen, 0), $start-percent: 0%, $end-percent: 100%);
+            opacity: 0.25;
+        }
+
+        h5 {
+            color: $lightgreen;
+        }
+
+        p {
+            text-indent: 1rem;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+            overflow-x: hidden;
+            padding: 1rem 0 6rem;
+            background-image: none;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(black, .5) url('../img/bg-withdraw-light.png') no-repeat center top/auto;
+                z-index: 0;
+            }
+
+            >.container {
+                position: relative;
+                z-index: 1;
+            }
+
+            .withdraw {
+                &-img {
+                    min-height: 410px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                &-detail {
+                    margin-top: -4rem;
+                    min-height: 400px;
+                    border: 2px solid rgba($green, .5);
+                    border-radius: 1rem;
+                    padding: 5rem 1rem 0;
+                    background-color: rgba(black, .5);
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: auto;
+                        margin-bottom: -30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &#games {
+        padding: 2rem 0;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2rem;
+            @include gradient-y($start-color: rgba($lightgreen, 0), $end-color: $lightgreen, $start-percent: 0%, $end-percent: 100%);
+            opacity: 0.25;
+        }
+
+        h5 {
+            strong {
+                color: $lightgreen;
+                display: block;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            background: url('../img/bg-games@2x.png') no-repeat center top/cover;
+            background-attachment: fixed;
+
+            &::before {
+                display: none;
+            }
+
+            h5 {
+                font-size: 2em;
+                margin-bottom: 2rem;
+
+                strong {
+                    color: $lightyellow;
+                }
+            }
+
+            .games {
+                max-width: 820px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+
+    &#brands {
+        padding: 2rem 0;
+        text-align: center;
+        background: url('../img/bg-brands.png') no-repeat center center/cover;
+
+        h5 {
+            strong {
+                color: $lightgreen;
+                display: block;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            background: url('../img/bg-brands@2x.png') no-repeat center center/cover;
+
+            h5 {
+                font-size: 3em;
+
+                strong {
+                    font-size: .75em;
+                }
+
+                small {
+                    font-size: .5em;
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    }
+}
