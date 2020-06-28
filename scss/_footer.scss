@@ -14,4 +14,9 @@ footer {
             font-size: 1.5em;
         }
     }
+
+    @include media-breakpoint-down(md) {
+        border-top: 6px solid $gold;
+        background-color: rgba(black, .25);
+    }
 }
