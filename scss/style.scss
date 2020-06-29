@@ -3,7 +3,7 @@
 @import './bootstrap/bootstrap.scss';
 
 @import './landing';
-@import './header', './footer';
+@import './header', './footer', './navs';
 
 body {
     @include media-breakpoint-up(lg) {

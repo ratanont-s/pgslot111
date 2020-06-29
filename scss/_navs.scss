@@ -1,0 +1,28 @@
+.nav-bottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $darkgreen;
+    box-shadow: -3px 0px 6px $darkgreen;
+    .nav{
+        &-item{
+            flex: 1 1 auto;
+        }
+        &-highlight{
+            @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+        }
+        &-link{
+            font-size: .8em;
+            text-align: center;
+            color: white;
+        }
+        &-icon{
+            margin-bottom: 0.5rem;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
