@@ -53,6 +53,10 @@ header {
         }
     }
 
+    &.header-user {
+        padding: 1rem 0;
+    }
+
     @include media-breakpoint-up(lg) {
         position: relative !important;
         background: url('../img/bg-header@2x.png') no-repeat center top/cover;

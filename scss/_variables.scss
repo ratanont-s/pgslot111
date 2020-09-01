@@ -7,12 +7,27 @@ $darkgreen: #082a20;
 $gold: #d3a661;
 $lightgold: #ffe1a3;
 
-$body-bg: $darkgreen;
+$green-2: #7ba500;
+
+$primary: #FC0100;
+
+$body-bg: #F1F0D9;
 $body-color: white;
 
-$theme-colors: ("darkgreen": $darkgreen);
+$navbar-bottom-bg: #02120E;
+$navbar-bottom-color: #ffffff;
+$navbar-bottom-bd-width: .25rem;
+$navbar-bottom-bd-color: #93744B;
+$navbar-bottom-center-bg:#454647;
+$navbar-bottom-highlight-bg:$primary;
+
+$theme-colors: ("darkgreen": $darkgreen, "green-2": $green-2);
 
 // Fonts
 $font-supermarket: 'supermarket';
 $font-arial: 'Arial Rounded MT';
 $font-family-base: $font-supermarket;
+$enable-responsive-font-sizes: true;
+
+// Links
+$link-hover-decoration: none;

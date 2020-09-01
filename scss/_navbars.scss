@@ -1,0 +1,41 @@
+.navbar-bottom {
+    border-top: $navbar-bottom-bd-width solid $navbar-bottom-bd-color;
+    border-bottom: $navbar-bottom-bd-width solid $navbar-bottom-bd-color;
+    background-color: $navbar-bottom-bg;
+
+    .nav {
+        &-link {
+            flex-grow: 1;
+            padding: 0.5rem;
+            color: $navbar-bottom-color;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &-center {
+                background-color: $navbar-bottom-center-bg;
+            }
+
+            &-highlight {
+                background-color: $navbar-bottom-highlight-bg;
+            }
+        }
+
+        &-icon {
+            font-size: 2em;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .nav {
+            &-link {
+                padding-bottom: 0.25rem;
+            }
+
+            &-icon {
+                font-size: 1em;
+            }
+        }
+    }
+}

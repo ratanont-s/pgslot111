@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="424" height="102" viewBox="0 0 424 102">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+        stroke: url(#linear-gradient);
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1186.485" y1="888.688" x2="1186.485" y2="810.094" gradientUnits="userSpaceOnUse">
+      <stop offset="-0.1" stop-color="#29b034"/>
+      <stop offset="0.328" stop-color="#09482f"/>
+      <stop offset="0.692" stop-color="#29f23f"/>
+      <stop offset="1.1" stop-color="#267229"/>
+    </linearGradient>
+    <filter id="filter" x="974" y="798" width="427" height="105" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="2.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-color="#2b7829"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" mode="blendSubtraction" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+      <feFlood result="flood-2" flood-color="#0e3624"/>
+      <feComposite result="composite-5" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-3" mode="screen" in2="blend-2"/>
+      <feGaussianBlur result="blur-2" stdDeviation="1" in="SourceAlpha"/>
+      <feFlood result="flood-3" flood-color="#dfda98" flood-opacity="0.56"/>
+      <feComposite result="composite-7" operator="out" in2="blur-2"/>
+      <feComposite result="composite-6" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-4" mode="screen" in2="blend-3"/>
+      <feGaussianBlur result="blur-3" stdDeviation="2.828" in="SourceAlpha"/>
+      <feFlood result="flood-4" flood-color="#204e14"/>
+      <feComposite result="composite-8" operator="out" in2="blur-3"/>
+      <feOffset result="offset"/>
+      <feComposite result="composite-9" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-5" mode="linearBurn" in2="blend-4"/>
+    </filter>
+  </defs>
+  <g transform="translate(-975.5 -799.5)" style="fill: ; filter: url(#filter)">
+    <path id="bg-btn-green" class="cls-1" d="M1006.48,810.094H1366.5a20,20,0,0,1,20,20v38.593a20,20,0,0,1-20,20H1006.48a20,20,0,0,1-20-20V830.094A20,20,0,0,1,1006.48,810.094Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use transform="translate(-975.5 -799.5)" xlink:href="#bg-btn-green" style="stroke: url(#linear-gradient); filter: none; fill: none"/>
+</svg>

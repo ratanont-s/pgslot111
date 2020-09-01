@@ -5,9 +5,51 @@
 @import './landing';
 @import './header', './footer';
 
+@import './navbars', './cards', './lists', './buttons';
+
+@import './user/user.scss';
+
+html,
 body {
-    @include media-breakpoint-up(lg) {
-        background: $darkgreen url('../img/bg-pattern.png') no-repeat center center/cover;
-        background-attachment: fixed;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+    flex-grow: 1;
+    padding: 60px 0;
+    margin-bottom: 68px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background-image: url('../img/border-bg.png');
+        background-repeat: repeat-x;
+        background-size: auto;
+        z-index: -1;
+    }
+
+    &::before {
+        top: 0;
+        background-position: left top;
+    }
+
+    &::after {
+        bottom: 0;
+        background-position: left bottom;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 96px;
     }
 }
