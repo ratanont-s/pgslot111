@@ -36,3 +36,29 @@
         }
     }
 }
+
+.btn-history-withdraw {
+    border: 2px solid #d7d7d7;
+    color: #7b7b7b;
+    border-radius: 1rem;
+    @include font-size(25);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .btn-icon {
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 0 .5rem;
+        line-height: 1;
+    }
+}
+
+.btn-copy-link {
+    background: url('../img/btn-copy-link.png') no-repeat center center/100% 100%;
+    border-width: 0;
+}

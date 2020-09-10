@@ -1,0 +1,5 @@
+.alert {
+    @include media-breakpoint-up(lg) {
+        @include font-size(25);
+    }
+}

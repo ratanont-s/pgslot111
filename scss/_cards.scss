@@ -24,11 +24,15 @@
             span {
                 background-color: $black;
                 color: #99e033;
-                padding: .5rem 4rem .25rem;
+                padding: .5rem 1rem .25rem;
                 @include font-size(33);
                 display: inline-block;
                 border-radius: .5rem;
                 border: 2px solid #99e033;
+
+                @include media-breakpoint-up(lg) {
+                    padding: .5rem 4rem .25rem;
+                }
             }
         }
 
@@ -85,6 +89,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    padding: 1rem;
 
                     &::before {
                         content: '';
@@ -173,6 +178,218 @@
                     color: #fcff00;
                     @include font-size(58);
                 }
+            }
+        }
+    }
+}
+
+.card-withdraw {
+    .btn-copy {
+        @include font-size(25);
+        color: #7b7b7b;
+        border: 5px double #7b7b7b;
+        border-radius: 20px;
+        background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
+        box-shadow: inset 0px 0px 4.32px 3.68px rgba(149, 149, 149, 0.004);
+    }
+}
+
+.card-account-deposit {
+    border-radius: 15px;
+    border: 2px solid #d7d7d7;
+    overflow: hidden;
+
+    .card {
+        &-header {
+            text-align: center;
+            background-color: #e1e1e1;
+            @include font-size(25);
+            color: #4d4949;
+        }
+
+        &-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+            }
+
+            &-img {
+                width: 88px;
+                height: 88px;
+                object-fit: cover;
+                margin-right: 1rem;
+            }
+
+            &-detail {
+                p {
+                    margin-bottom: 0.25rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-games {
+    .card {
+        &-inner {
+            padding-bottom: 0;
+        }
+    }
+
+    &-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &-link {
+            display: block !important;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.card-games-link {
+    padding: 2rem 1rem 1rem;
+    border-radius: 1rem;
+    background: #267229;
+    background: linear-gradient(to bottom, #267229 0%, #29f23f 35%, #09482f 65%, #29b034 100%);
+    position: relative;
+    box-shadow: 0 0 .5rem #2b7829;
+    max-width: 787px;
+    margin: 0 auto -1rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+        background-color: $black;
+        border-radius: 1rem;
+        z-index: 0;
+    }
+
+    .card {
+        &-link {
+            display: block;
+            text-align: center;
+
+            &-icon {
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+
+            &-text {
+                @include font-size(18);
+                color: $white;
+            }
+        }
+    }
+}
+
+.card-commission {
+    border-radius: 20px;
+    text-align: center;
+    color: $white;
+    border: 0.25rem solid rgba($black, .15);
+    overflow: hidden;
+
+    &-inner {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    &.blue {
+        background-color: #556292;
+    }
+
+    &.purple {
+        background-color: #a864a8;
+    }
+
+    &.green {
+        background-color: #3cb878;
+    }
+
+    .card {
+        &-header {
+            background-color: rgba($black, .15);
+            border-bottom-width: 0;
+            @include font-size(30);
+        }
+
+        &-title {
+            margin-bottom: 0;
+            opacity: 0.5;
+            @include font-size(58);
+        }
+    }
+}
+
+.card-refund {
+    @extend .card-commission;
+
+    &.red {
+        background-color: #f26d7d;
+    }
+}
+
+.card-bonus {
+    .card {
+        &-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        &-img {
+            border-radius: 0;
+        }
+
+        &-body {
+            background-color: #534741;
+            border-radius: 10px;
+            height: 100%;
+            margin-left: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            color: $white;
+        }
+
+        &-title {
+            border-bottom: 1px solid rgba($white, .5);
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: calc(-20px/2);
+                width: 20px;
+                height: 20px;
+                background: #534741 url('../img/spade.png') no-repeat center center/auto;
             }
         }
     }

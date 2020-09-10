@@ -49,70 +49,60 @@
 
     <main>
         <div class="container">
-            <div class="card card-body card-user card-deposit">
-                <h2 class="card-header">ระบบถอนเงิน</h2>
-                <div class="text-center py-4">
-                    <div class="card-id">
-                        รหัสสมาชิกหมายเลข
-                        <strong>PGS00000111</strong>
-                    </div>
-                    <div class="card-name"><span>คุณสมาชิก สล็อตออนไลน์</span></div>
-                </div>
-                <div class="card-inner mb-4">
-                    <div class="card-balance mb-0">
-                        <div class="row align-items-center">
-                            <div class="col-lg">
-                                <div class="card-balance-content">
-                                    <button class="btn">
-                                        <i class="fas fa-sync fa-lg"></i>
-                                    </button>
-                                    <div class="card-balance-text">ยอดเงินคงเหลือ <strong>0.00</strong></div>
+            <div class="card card-body card-user">
+                <h2 class="card-header mb-4">ระบบค่าคอมมิชชั่น</h2>
+                <div>
+                    <div class="card-commission-inner">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card card-commission blue">
+                                    <h4 class="card-header">เครดิตคงเหลือ</h4>
+                                    <div class="card-body">
+                                        <h5 class="card-title">000</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg">
-                                <div class="row">
-                                    <div class="col-sm mb-4 mb-sm-0">
-                                        <a href="#" class="btn btn-link btn-block">
-                                            <span class="btn-link-icon"><i class="far fa-credit-card"></i></span>
-                                            <span class="btn-link-text">ฝากเงิน</span>
-                                        </a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="#" class="btn btn-link btn-block">
-                                            <span class="btn-link-icon"><i class="fas fa-hand-holding-usd"></i></span>
-                                            <span class="btn-link-text">ถอนเงิน</span>
-                                        </a>
+                            <div class="col-md-6 mb-3">
+                                <div class="card card-commission purple">
+                                    <h4 class="card-header">เครดิตใช้ไปเเล้ว</h4>
+                                    <div class="card-body">
+                                        <h5 class="card-title">000</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card card-account-deposit mb-3">
-                    <h5 class="card-header">บัญชีสำหรับการฝากเงิน</h5>
-                    <div class="card-body">
-                        <ul class="card-list">
-                            <li>
-                                <img src="https://via.placeholder.com/88" alt="" class="card-list-img">
-                                <div class="card-list-detail">
-                                    <p>ธนาคาร :</p>
-                                    <p>ชื่อบัญชี :</p>
-                                    <p>เลขบัญชี :</p>
+                        <div class="input-group input-group-lg input-group-copy-link mb-3">
+                            <input type="text" class="form-control" value="" id="link">
+                            <div class="input-group-append">
+                                <button class="btn btn-copy-link" type="button" data-clipboard-target="#link"><i
+                                        class="far fa-copy"></i> คัดลอกลิงค์</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card card-commission green">
+                                    <h4 class="card-header">เเนะนำเพื่อน ชั้นที่1</h4>
+                                    <div class="card-body">
+                                        <h5 class="card-title">000</h5>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card card-commission green">
+                                    <h4 class="card-header">เเนะนำเพื่อน ชั้นที่2</h4>
+                                    <div class="card-body">
+                                        <h5 class="card-title">000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="#" class="btn-img btn-block">
+                                    <img src="../assets/img/btn-transfer.png" alt="">
+                                </a>
+                                <button class="btn btn-transfer">โอนเข้ากระเป๋าหลัก</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="alert alert-danger text-center" role="alert">
-                    ยอดเงินคงเหลือต่ำกว่า 200 บาท ไม่สามารถถอนได้
-                </div>
-                <div class="text-center">
-                    <a href="#" class="btn btn-history-withdraw">
-                        ดูประวัติการฝากเงิน
-                        <span class="btn-icon">
-                            <i class="fas fa-money-bill"></i>
-                        </span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -152,6 +142,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('.btn-copy');
+    </script>
 </body>
 
 </html>

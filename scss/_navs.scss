@@ -1,28 +1,84 @@
-.nav-bottom{
+.nav-bottom {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: $darkgreen;
     box-shadow: -3px 0px 6px $darkgreen;
-    .nav{
-        &-item{
+
+    .nav {
+        &-item {
             flex: 1 1 auto;
         }
-        &-highlight{
+
+        &-highlight {
             @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
         }
-        &-link{
+
+        &-link {
             font-size: .8em;
             text-align: center;
             color: white;
         }
-        &-icon{
+
+        &-icon {
             margin-bottom: 0.5rem;
             height: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+    }
+}
+
+.nav-financial-history {
+    margin: 0 -0.5rem;
+    flex-direction: column;
+
+    .nav {
+        &-item {
+            padding: 0 .5rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        &-link {
+            color: #a3d39c;
+            @include font-size(40);
+            background: linear-gradient(to bottom, #267229 0%, #29f23f 35%, #09482f 65%, #29b034 100%);
+            position: relative;
+            border-radius: 1rem;
+            box-shadow: 0 0 .5rem #2b7829;
+            padding: 1rem 1rem .5rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                right: 3px;
+                bottom: 3px;
+                background-color: #0e3624;
+                border: .25rem solid black;
+                border-radius: 1rem;
+                z-index: 0;
+            }
+
+            * {
+                position: relative;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        flex-direction: row;
+
+        .nav {
+            &-item {
+                flex-basis: 0;
+                flex-grow: 1;
+                margin-bottom: 0;
+            }
         }
     }
 }

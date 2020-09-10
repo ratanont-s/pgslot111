@@ -5,9 +5,9 @@
 @import './landing';
 @import './header', './footer', './navs';
 
-@import './navbars', './cards', './lists', './buttons';
+@import './navbars', './cards', './lists', './buttons', './alerts', './input-group', './tables';
 
-@import './user/user.scss';
+@import './user/user';
 
 html,
 body {
@@ -32,10 +32,10 @@ main {
         position: absolute;
         left: 0;
         right: 0;
-        height: 200px;
+        height: 35px;
         background-image: url('../img/border-bg.png');
-        background-repeat: repeat-x;
-        background-size: auto;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
         z-index: -1;
     }
 

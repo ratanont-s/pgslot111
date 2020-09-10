@@ -55,6 +55,51 @@ header {
 
     &.header-user {
         padding: 1rem 0;
+
+        >.container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            @include font-size(32);
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $black;
+            border-radius: 2rem;
+            box-shadow: 0 5px 5px rgba(black, .5);
+            position: relative;
+
+            @include media-breakpoint-up(lg) {
+                min-width: 250px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: inherit;
+                border: 5px double rgba(white, .5);
+            }
+
+            span {
+                display: block;
+                @include font-size(27);
+            }
+
+            &-home {
+                background: linear-gradient(to bottom, #fddf51 0%, #ffb83b 35%, #ffb70b 65%, #fffc00 100%);
+            }
+
+            &-logout {
+                background: linear-gradient(to bottom, #fd5151 0%, #dd1e1e 35%, #ff0b0b 65%, #ff9228 100%);
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {
