@@ -3,30 +3,42 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $darkgreen;
+    background-color: #03120d;
+    border-top: 5px solid #95744b;
+    border-bottom: 5px solid #95744b;
     box-shadow: -3px 0px 6px $darkgreen;
+    z-index: 9999;
 
     .nav {
         &-item {
             flex: 1 1 auto;
+            text-align: center;
+        }
+
+        &-try-play {
+            background-color: #464646;
         }
 
         &-highlight {
-            @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+            background-color: $primary;
         }
 
         &-link {
             font-size: .8em;
-            text-align: center;
             color: white;
         }
+    }
 
-        &-icon {
-            margin-bottom: 0.5rem;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    @include media-breakpoint-up(lg) {
+        .nav {
+            &-icon {
+                font-size: 2.5rem;
+            }
+
+            &-link {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
         }
     }
 }

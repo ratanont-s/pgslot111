@@ -6,6 +6,16 @@
         background: $darkgreen url('../img/bg-pattern.png') no-repeat center center/cover;
         background-attachment: fixed;
     }
+
+    main {
+        padding: 0;
+        margin-bottom: 0;
+
+        &::before,
+        &:after {
+            display: none;
+        }
+    }
 }
 
 section {
@@ -21,24 +31,6 @@ section {
 
     &#video {
         position: relative;
-        padding: 4px 0;
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 4px;
-            bottom: 0;
-            @include gradient-y($start-color: $lightgold, $end-color: $gold, $start-percent: 0%, $end-percent: 100%);
-        }
-
-        @include media-breakpoint-up(lg) {
-            &::after {
-                height: 6px;
-                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
-            }
-        }
     }
 
     &#service {

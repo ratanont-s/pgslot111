@@ -16,23 +16,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg">
-                        <a href="#" class="btn">
-                            <strong>REGISTER</strong>
-                            สมัครสมาชิก
+                        <a href="#" class="btn btn-img">
+                            <!-- <strong>REGISTER</strong>
+                            สมัครสมาชิก -->
+                            <img src="./assets/img/btn-register@2x.png" alt="Register สมัครสมาชิก" class="img-fluid">
                         </a>
                     </div>
                     <div class="col-lg"></div>
                     <div class="col-lg">
-                        <a href="#" class="btn">
-                            <strong>LOGIN</strong>
-                            เข้าสู่ระบบ
+                        <a href="#" class="btn btn-img">
+                            <!-- <strong>LOGIN</strong>
+                            เข้าสู่ระบบ -->
+                            <img src="./assets/img/btn-login@2x.png" alt="Login เข้าสู่ระบบ" class="img-fluid">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg">
-            <div class="container">
+            <div class="container-fluid">
                 <div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent">
@@ -60,7 +62,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ทดลองเล่นฟรี</a>
+                            <a class="nav-link text-primary" href="#">ทดลองเล่นฟรี</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">ติดต่อทีมงาน</a>
@@ -73,10 +75,12 @@
     <main class="d-lg-flex flex-lg-column">
         <!-- Video -->
         <section id="video" class="order-lg-1">
+            <img src="./assets/img/border-pattern.png" alt="" class="w-100">
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                     allowfullscreen></iframe>
             </div>
+            <img src="./assets/img/border-pattern.png" alt="" class="w-100">
         </section>
 
         <!-- Service -->
@@ -535,53 +539,46 @@
         </div>
     </footer>
 
-    <!-- Nav Bottom only Mobile -->
-    <ul class="nav nav-bottom d-lg-none">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">
+    <!-- Nav bottom -->
+    <nav class="navbar navbar-bottom fixed-bottom text-center p-0">
+        <div class="container">
+            <a class="nav-link" href="index.html">
                 <div class="nav-icon">
-                    <img src="./assets/img/icon-home.svg" alt="หน้าแรก">
+                    <i class="fas fa-home"></i>
                 </div>
-                หน้าแรก
+                <div class="nav-text">หน้าแรก</div>
             </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="promotion.html">
                 <div class="nav-icon">
-                    <img src="./assets/img/icon-gift.svg" alt="โปรโมชั่น">
+                    <i class="fas fa-gift"></i>
                 </div>
-                โปรโมชั่น
+                <div class="nav-text">โปรโมชั่น</div>
             </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-highlight" href="#">
+            <a class="nav-link nav-link-center" href="login.html">
                 <div class="nav-icon">
-                    <img src="./assets/img/icon-user-plus.svg" alt="สมัครสมาชิก">
+                    <i class="fas fa-play"></i>
                 </div>
-                สมัครสมาชิก
+                <div class="nav-text">ทดลองเล่น</div>
             </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link nav-link-highlight" href="register.html">
                 <div class="nav-icon">
-                    <img src="./assets/img/icon-gamepad.svg" alt="ทดลองเล่น">
+                    <i class="fas fa-user-plus"></i>
                 </div>
-                ทดลองเล่น
+                <div class="nav-text">สมัครสมาชิก</div>
             </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="contact-us.html">
                 <div class="nav-icon">
-                    <img src="./assets/img/icon-headset.svg" alt="ติดต่อเรา">
+                    <i class="fab fa-line"></i>
                 </div>
-                ติดต่อเรา
+                <div class="nav-text">ติดต่อเรา</div>
             </a>
-        </li>
-    </ul>
+        </div>
+    </nav>
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 </body>
 
 </html>

@@ -394,3 +394,16 @@
         }
     }
 }
+
+.card-custom {
+    border-radius: 35px;
+    border-width: 0;
+    color: $black;
+    box-shadow: 0 5px 5px rgba($black, .5);
+
+    .card {
+        &-header {
+            background-color: transparent;
+        }
+    }
+}

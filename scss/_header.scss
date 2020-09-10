@@ -1,39 +1,28 @@
 header {
     background: $darkgreen;
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        @include gradient-y($start-color: $gold, $end-color: $lightgold, $start-percent: 0%, $end-percent: 100%);
-        z-index: 0;
-    }
-
     .header {
         &-top {
             padding: 6rem 0 1rem;
             text-align: center;
 
-            .btn {
-                min-width: 250px;
-                color: black;
-                border-radius: 10rem;
-                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+            // .btn {
+            //     min-width: 250px;
+            //     color: black;
+            //     border-radius: 10rem;
+            //     @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
 
-                &:hover {
-                    filter: drop-shadow(0 3px 6px rgba(white, .5));
-                }
+            //     &:hover {
+            //         filter: drop-shadow(0 3px 6px rgba(white, .5));
+            //     }
 
-                strong {
-                    display: block;
-                    font-size: 1.5em;
-                    margin-bottom: -.5rem;
-                    font-family: $font-arial;
-                }
-            }
+            //     strong {
+            //         display: block;
+            //         font-size: 1.5em;
+            //         margin-bottom: -.5rem;
+            //         font-family: $font-arial;
+            //     }
+            // }
         }
     }
 
@@ -116,17 +105,6 @@ header {
             background: url('../img/bg-logo@2x.png') no-repeat center top/auto;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
-            z-index: 0;
-        }
-
         .navbar {
             padding: 0;
             z-index: 1;
@@ -150,19 +128,22 @@ header {
                 &.active {
                     .nav-link {
                         color: black;
-                        background: url('../img/bg-nav-link-active.png') repeat-x left center/auto 100%;
+                        // filter: brightness(1.25) saturate(1.25);
                     }
                 }
             }
 
             &-link {
-                border-top-left-radius: .5rem;
-                border-top-right-radius: .5rem;
                 color: black;
-                min-width: 125px;
-                padding-bottom: 0;
-                font-size: 1.25em;
-                @include gradient-y($start-color: $lightgreen, $end-color: darken($lightgreen, 20%), $start-percent: 0%, $end-percent: 100%);
+                background: url('../img/bg-btn-gd-gold.png') no-repeat center center/100% 100%;
+                min-width: 180px;
+                @include font-size(25);
+                line-height: 1;
+                padding: 1rem .5rem .5rem;
+
+                &:hover {
+                    filter: brightness(1.25) saturate(1.25);
+                }
             }
         }
     }
